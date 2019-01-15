@@ -4,14 +4,11 @@ import GifSearch from '../components/GifSearch'
 
 class GifListContainer extends React.Component {
   
-  
-  
-  
   state = {
     gifs: []
   }
 
-   render() {
+  render() {
     return(
       <div>
         <GifSearch fetchGIFs={this.fetchGIFs}/>
@@ -20,12 +17,12 @@ class GifListContainer extends React.Component {
     )
   }
 
-   fetchGIFs = (query) => {
+  fetchGIFs = (query) => {
     fetch(`https://api.giphy.com/v1/gifs/search?q=${query}&api_key=dc6zaTOxFJmzC&rating=g&limit=3`)
       .then(res => res.json())
       .then(({data}) => {
         this.setState({ gifs: data.map( gif => ({ url: gif.images.original.url }) ) })
-      })
+    })
   }
 
    componentDidMount() {
