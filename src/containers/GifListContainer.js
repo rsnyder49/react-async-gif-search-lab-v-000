@@ -25,9 +25,10 @@ class GifListContainer extends React.Component {
     })
   }
 
-   componentDidMount() {
+  componentDidMount() {
     this.fetchGIFs()
   }
 }
 
- export default GifListContainer
+export default GifListContainer
+
