@@ -8,4 +8,4 @@ const GifList = props => {
   )
 }
 
- export default GifList
+export default GifList
